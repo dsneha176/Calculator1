@@ -13,7 +13,7 @@ pipeline{
     }
     stage('build'){
       steps {
-        sh 'java Caclator 25 5'
+        sh 'java Calculator 25 5'
       }
     }
     stage('test'){
