@@ -1,0 +1,22 @@
+pipeline{
+  agent any
+  stages{
+    stage('clone'){
+      steps{
+        git branch:'main',url:'https://github.com/dsneha176/Calculator1.git';
+      }
+    }
+    stage('compile'){
+      steps{
+        sh'javac calculator.java'
+      }
+    }
+    stage('build'){
+      steps{
+        sh'java Calculator 25 5'
+      }
+    }
+  }
+}
+      
+  
